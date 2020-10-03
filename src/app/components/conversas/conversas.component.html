@@ -1,0 +1,22 @@
+<div class="conversas">
+  <div *ngFor="let conversa of conversas"
+  (click)="notificar(conversa)"
+  [class.selected]="conversa === selectedConversa"
+  class="contato">
+      <div class="foto-contato">
+          <img class="thumbnail" src={{conversa.foto}} />
+      </div>
+
+      <div class="informacoes-contato">
+          <div class="infos-superiores">
+              <h2>{{conversa.nome}}</h2>
+              <p *ngFor="let mensagem of (conversa.mensagens | slice: -1)">{{mensagem.horario}}</p>
+          </div>
+          <div class="infos-inferiores">
+              <h3 *ngFor="let mensagem of (conversa.mensagens | slice: -1)">{{mensagem.mensagem}}</h3>
+              <p></p>
+          </div>
+      </div>
+  </div>
+</div>
+

@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <aside class="aside">
+    <app-cabecalho-perfil></app-cabecalho-perfil>
+    <app-conversas (conversaSelecionada)="receberMensagem($event)"></app-conversas>
+  </aside>
+
+  <main class="main">
+    <div *ngIf="conversa">
+      <main class="main">
+        <div class="cabecalho cabecalho-conversa">
+            <div class="informacoes-conversa">
+                <div class="foto-perfil">
+                    <img class="thumbnail" src={{conversa.foto}} />
+                </div>
+
+                <div class="status-conversa">
+                    <h1>{{conversa.nome}}</h1>
+                    <p>{{conversa.status}}</p>
+                </div>
+            </div>
+
+            <div class="icones-perfil">
+              <i><fa-icon [icon]="faSearch"></fa-icon></i>
+              <i><fa-icon [icon]="faEllipsisV"></fa-icon></i>
+            </div>
+        </div>
+
+        <div class="conversa-chat">
+            <div *ngFor="let mensagem of conversa.mensagens"
+            [ngClass]="mensagem.flagMinhaMensagem == true ? 'autor-chat' : 'contato-chat'">
+                <p>{{mensagem.mensagem}}</p>
+                <p><font size="1">{{mensagem.horario}}</font></p>
+            </div>
+        </div>
+
+        <div class="painel-chat">
+            <div class="midias-chat">
+              <i><fa-icon [icon]="faLaughWink"></fa-icon></i>
+              <i><fa-icon [icon]="faPaperclip"></fa-icon></i>
+            </div>
+
+            <div class="caixa-chat">
+                <input (keyup.enter)="novaMensagem()" [(ngModel)]="nova" type="text" name="busca" autofocus placeholder="Type a message"/>
+            </div>
+
+            <div class="microfone-chat">
+              <i><fa-icon [icon]="faMicrophone"></fa-icon></i>
+            </div>
+        </div>
+      </main>
+    </div>
+
+  </main>
+
+</div>
+

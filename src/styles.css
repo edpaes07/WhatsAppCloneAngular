@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+body{
+  margin: 0;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  overflow-y: hidden;
+}
+
+.container-fluid{
+  max-width: 100%;
+  display: flex;
+}
+
+.aside{
+  width: 43%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #131c21;
+  color: #cacbcd;
+  border-right: 1px solid #3f4448;
+
+}
+
+.main{
+  background: url('../../whatsapp/src/assets/img/fundo-inicio.png') repeat-x;
+  width: 100%;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho{
+  min-height: 10vh;
+  padding: 0 10px;
+  background-color: rgba(0,0,0, 0.05);
+}
+
+.altura-cabecalho{
+  height: 20vh;
+}
+
+.cabecalho-perfil, .cabecalho-conversa{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2f32;
+}
+
+.informacoes-conversa{
+  display: flex;
+  align-items: center;
+}
+
+.informacoes-conversa h1, .informacoes-conversa p{
+  margin: 0;
+  color: white;
+}
+
+.informacoes-conversa h1{
+  font-size: 16px;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+.informacoes-conversa p{
+  font-size: 13px;
+  font-weight: 300;
+  color: darkgray;
+
+}
+
+.status-conversa{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.cabecalho-perfil .thumbnail{
+  height: auto;
+  width: 40px;
+  border-bottom: 1px solid #3f4448;
+}
+
+.thumbnail{
+  height: auto;
+  width: 45px;
+  border-radius: 50%;
+  padding-left: 5px;
+}
+
+.icones-perfil{
+  display: flex;
+  justify-content: space-around;
+}
+
+.icones-perfil i{
+  font-size: 20px;
+  margin: 0 15px;
+  color: #b1b3b5;
+}
+
+.formulario-busca{
+  background-color: #131c21;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: white;
+  border-bottom: 1px solid #3f4448;
+}
+
+.formulario-busca i{
+  font-size: 12px;
+  width: 45px;
+  height: auto;
+  text-align: center;
+  background-color: #323739;
+  padding: 10px 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #323739;
+  border-right-color: transparent;
+  color: #6e7275;
+}
+
+.input-search{
+  background-color: #323739;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: 1px solid #323739;
+  border-left-color: transparent;
+  color: #b1b3b5;
+  width: 100%;
+  height: 25px;
+  padding: 17px 5px;
+  outline: none;
+}
+
+.conversas{
+  overflow-y: auto;
+  position: relative;
+  max-height: 100vh;
+}
+
+.contato{
+  display: flex;
+  padding: 10px 10px 0 10px;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.contato:hover{
+  background-color: rgba(0,0,0, 0.04);
+  transition: 0.2s;
+}
+
+.informacoes-contato{
+  width: 100%;
+  padding: 0 10px 10px 10px;
+  border-bottom: 1px solid #3f4448;
+}
+
+.infos-superiores, .infos-inferiores{
+  display: flex;
+  justify-content: space-between;
+  color: #c9cacc;
+}
+
+.infos-superiores p{
+  font-size: 13px;
+}
+
+.informacoes-contato h2, .informacoes-contato h3, .informacoes-contato p{
+  margin: 0;
+  font-weight: 300;
+}
+
+.informacoes-contato h2{
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.informacoes-contato h3{
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  width: 100%;
+}
+
+.nova-mensagem h3, .nova-mensagem h2{
+  font-weight: 500;
+}
+
+.nova-mensagem .infos-inferiores p{
+  color: #fff;
+  font-size: 12px;
+  background-color: #06D755;
+  padding: .1em .2em .2em;
+  border-radius: 1.1em;
+  min-width: .9em;
+  min-height: 1em;
+  text-align: center;
+  display: inline-block;
+}
+
+.conversa-chat{
+  background: url('../../whatsapp/src/assets/img/fundo.png') repeat-x;
+  background-size: auto;
+  height: 90vh;
+  padding: 0 9%;
+  overflow: auto;
+  overflow-anchor: auto;
+  padding-bottom: -10px;
+}
+
+.conversa-chat p{
+  margin: 0;
+  color: white;
+}
+
+.conversa-chat .autor-chat{
+  text-align: right;
+  margin-left: auto;
+  background-color: #054740;
+  padding: 5px 7px;
+  width: max-content;
+  border: 2px solid #054740;
+  border-radius: 10px 0 10px 10px;
+  margin-bottom: 2px;
+}
+
+.conversa-chat .contato-chat{
+  text-align: left;
+  text-align: right;
+  margin-right: auto;
+  background-color: #262d31;
+  padding: 5px 7px;
+  width: max-content;
+  border: 2px solid #262d31;
+  border-radius: 0px 10px 10px 10px;
+  margin-bottom: 2px;
+}
+
+.painel-chat{
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  background-color: #1e2428;
+  justify-content: space-around;
+}
+
+.painel-chat i{
+  color: #828689;
+  font-size: 22px;
+  padding: 0 5px;
+}
+
+.caixa-chat{
+  width: 80%;
+}
+
+.painel-chat input[type=text]{
+  background-color: #33383b;
+  border-radius: 30px;
+  border: 1px solid #33383b;
+  border-left-color: transparent;
+  width: 100%;
+  height: 25px;
+  padding: 7px;
+  outline: none;
+  color: white;
+  font-size: 15px;
+}
+
+.microfone-chat{
+  text-align: right;
+}
+
+.autor-chat, .contato-chat{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight: 300;
+}
+
+.autor-chat span, .contato-chat span{
+  color: rgba(0,0,0, 0.4);
+  font-size: 13px;
+}
+
+.autor-chat p{
+  padding: 0 15px 0 0;
+}
+
+.contato-chat p{
+  padding: 0 0 0 15px;
+}
+
+@media(min-width: 1400px){
+  .altura-cabecalho{
+    height: 17vh;
+  }
+  .conversas{
+    background-color: #131c21;
+    overflow-y: auto;
+    position: relative;
+    max-height: 83vh;
+  }
+}
